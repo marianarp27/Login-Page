@@ -1,0 +1,161 @@
+:root {
+  --red: #E73C37;
+  --soft-bronw: #BFB0A0;
+  --dark: #312C38;
+  --soft-beje: #F7EFE7;
+  --soft-white: #f1f1f1;
+
+   /* --- Font and typography --- */
+   --body-font: 'Poppins', sans-serif;
+   --big-font-size: 1.5rem;
+   --normal-font-size: .938rem;
+}
+
+
+/* ------------------------------------- */
+/* ---------------  BASE --------------- */
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+button{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body{
+  background-color: var(--soft-beje);
+  position: relative;
+}
+
+
+/* ------------------------------------- */
+/* ---------------  BASE --------------- */
+.content {
+  max-width: 620px; 
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+}
+
+/* ---------------------------------------------- */
+/* -------------  CARD -- img + inf ------------- */
+.section_image {
+  border-radius: 4px 0 0 4px;
+  padding: 40px;
+}
+
+/* --------------------------------------- */
+/* ------------  CARD -- form ------------ */
+.section_auth {
+  background-color: white;
+  width: 350px;
+  border-radius: 0 4px 4px 0;
+  padding: 40px 50px 40px 40px;
+}
+
+
+.info_auth h5 {
+  color: var(--dark);
+  font-weight: bolder;
+}
+
+/* ---- inputs -- email + pass ---- */
+.form-group .form-control {
+  padding-left: 2.375rem;
+  background-color: rgb(248, 248, 248);
+  
+}
+
+/* -------- input icon --------- */
+.form-group .form_control_icon {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;  
+}
+
+/* --------- input on focus --------- */
+.form-control:focus,.form-control.focus {
+  border: 2px solid var(--red);
+}
+
+.form-group label {
+  color: #8a8a8a;
+  font-size: smaller;
+  margin-bottom: .2rem;
+}
+
+/* -------------------------------------- */
+/* -------- btn cancel + submit --------- */
+
+.btn__cancel {
+  background-color: var(--soft-white);
+  color: #666666;
+}
+.btn__cancel:hover {
+  background-color: var(--red);
+  color: var(--soft-white);
+}
+
+
+.btn__submit {
+  background-color: var(--red);
+  color: var(--soft-white);
+}
+
+/* -------- info other methods of auth -------- */
+.info__other_auth {
+  font-size: smaller;
+  text-align: center;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+
+
+/* -------------------------------------- */
+/* ----- btn other auth google + fb ----- */
+
+.btn__google, .btn__fb {
+  background-color: var(--soft-white);
+}
+.btn__google img,
+.btn__fb img {
+  width: 20px;
+}
+
+
+footer {
+  font-size: smaller;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+footer a{
+  color: #acacac;
+}
+footer a:hover{
+  color: #696969;
+}
+
+/* ---------------------------------------------- */
+/* -------- remove default focus on btn --------- */
+.btn:not(:disabled):not(.disabled):active:focus,
+.btn:focus, .btn.focus,
+.form-control:focus,.form-control.focus
+{
+  box-shadow:none;
+}
