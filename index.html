@@ -4,95 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/fluency/50/000000/pets.png">
 
     <!-- ------- Bootstrap --------- -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     
-    <!-- ------- Icons - Font Awesome --------- -->
-    <script src="https://use.fontawesome.com/aceedc155b.js"></script>
-
+    <!-- ------- Icons --------- -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     
     <!-- ------- CSS --------- -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Login Page</title>
+    <title>Login Page </title>
 </head>
 <body>
 
 
-    <div class="header_login d-flex justify-content-center p-5">
-        Company Logo
+    <div class="header_login d-flex justify-content-center mt-5 mb-5">
+        
     </div>
 
-    <div class="content d-flex justify-content-center">
+    <div class="container content d-flex justify-content-center">
         <div class="row">
-            <div class="col section_image d-flex align-items-start flex-column">
-                <i class="fa fa-arrow-left mb-auto " aria-hidden="true"></i>
 
-                <div class="info_company">
-                    <h5 class="mb-3">Company name</h5>
-                    <p class=" mb-0">Lorem Ipsum comes from sections 1 and 2 of de Finibus Bonorum et Malorum</p>
-                </div>
+            <div class="col-sm-12 col-md-5 section_image d-flex align-items-start flex-column">
+                <i class="fa fa-arrow-left mb-auto " aria-hidden="true"></i>
+                
+
+               <!--  <div class="info_company">                    
+                    <h5 class="mb-3">Fellini & Sons</h5>
+                    <p class=" mb-0">Hotel Canino e Felino, lugar perfeito para deixar o seu fial amigo!</p>
+                </div> -->
             </div>
-            <div class="col-auto section_auth">
+
+            <div class="col-sm-12 col-md-7 section_auth">
 
                 <div class="info_auth">
-                    <h5 class="mb-3">Sign in to Company</h5>
-                    <p class=" mb-0">Lorem Ipsum comes from sections 1 and 2 of de Finibus Bonorum et Malorum</p>
+                    <h5 class="mb-2">Bem vindo ao <span>Fellini & Sons</span></h5>
+                    <!-- <p>Ainda não tem conta? <a href="#">Registe-se</a></p> -->
                 </div>
-                
-                
+                                
                 <form action="#">
                     <div class="mb-3 form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <span class="fa fa-search form_control_icon"></span>
+                        <label for="email" class="form-label">E-mail</label>
+                        <span class="bx bx-user form_control_icon"></span>
                         <input type="email" class="form-control" id="email">
                     </div>
 
                     <div class="mb-3 form-group">
-                        <label for="pass" class="form-label">Password</label>
-                        <span class="fa fa-search form_control_icon"></span>
-                        <input type="password" class="form-control" id="pass">
+                        <a href="#" class="reset_pass">Esqueceu-se da palavra-passe?</a>
+                        <label for="pass" class="form-label">Palavra-passe</label>
+                        <span class="bx bx-lock-alt form_control_icon"></span>
+                        <input type="password" class="form-control" id="pass">                        
+                    </div>
+
+                    <div class="form-check form-group">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Manter sessão
+                        </label>
                     </div>
                     
                     <div class="d-flex justify-content-end mt-4">
-                        <button class="btn btn__cancel me-md-3">Cancel</button>
-                        <button type="submit" class="btn btn__submit w-100">Log in</button>
+                        <!-- <button class="btn btn__cancel me-3">Cancelar</button> -->
+                        <button type="submit" class="btn btn__submit w-100">Iniciar sessão</button>
                     </div>
                     
                 </form> 
 
-                <hr class="divider">
-                <p class="info__other_auth">Ou, fazer login diretamente com: </p>
+                <p class="dont_have_acount_btn">Ainda não tem conta? <a href="#">Registe-se</a></p>
+
+                <p class="info__other_auth mt-4"><span>Ou</span></p>
                 
+                <div class="row other_auth ">
+                    <div class="col">
+                        <button class="btn btn__other_auth w-100 d-flex align-items-center justify-content-center"> 
+                            <i class='bx bxl-google' ></i>
+                            <span class="ms-2">Google</span> 
+                        </button>                      
+                    </div>
 
-                <button class="btn btn__google w-100 mb-3 d-flex "> 
-                    <img src="https://img.icons8.com/color/48/000000/google-logo.png"/> 
-                    <span class="flex-grow-1">Continuar com Google</span> 
-                </button>
-                <button class="btn btn__fb w-100 d-flex justify-content-evenly">
-                    <img src="https://img.icons8.com/color/48/000000/facebook-new.png"/> 
-                    <span class="flex-grow-1">Continuar com Facebook</span> 
-                </button>
+                    <div class="col">
+                        <button class="btn btn__other_auth w-100 d-flex align-items-center justify-content-center">
+                            <i class='bx bxl-facebook'></i>
+                            <span class="ms-2">Facebook</span> 
+                        </button>
+                    </div>
 
+                </div>
+               
             </div>           
 
-
-        </div>
+        </div>        
     </div>
 
-        <footer class="text-center">
-            <a class="me-2" href="https://icons8.com/icon/13912/facebook">Facebook icon by Icons8</a>
-            <a href="https://icons8.com/icon/17949/google">Google icon by Icons8</a>
-        </footer>
-    
+
    
 
-        
-   
-
+    <footer class="text-center">
+        <a href="https://icons8.com/icon/vHiINsjzGS5t/pets">Favicon - Pets icon by Icons8</a>
+    </footer>
     
-    
-
 
     <!-- ------- JS Bootstrap --------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

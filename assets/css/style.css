@@ -1,19 +1,21 @@
+
 :root {
   --red: #E73C37;
   --soft-bronw: #BFB0A0;
   --dark: #312C38;
+  --beje: #B99581;
   --soft-beje: #F7EFE7;
   --soft-white: #f1f1f1;
 
    /* --- Font and typography --- */
-   --body-font: 'Poppins', sans-serif;
+   --body-font: Helvetica, sans-serif;
    --big-font-size: 1.5rem;
    --normal-font-size: .938rem;
 }
 
 
 /* ------------------------------------- */
-/* ---------------  BASE --------------- */
+/* ---------------  BODY  --------------- */
 
 *{
   box-sizing: border-box;
@@ -36,7 +38,7 @@ body{
 /* ------------------------------------- */
 /* ---------------  BASE --------------- */
 .content {
-  max-width: 620px; 
+  max-width: 650px; 
   margin: 20px auto;
   display: flex;
   flex-direction: column;
@@ -48,17 +50,34 @@ body{
 .section_image {
   border-radius: 4px 0 0 4px;
   padding: 40px;
+  background-image: url(/assets/img/dog1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section_image img{
+  width: 180px;
+  margin: 0;
 }
 
 /* --------------------------------------- */
 /* ------------  CARD -- form ------------ */
 .section_auth {
   background-color: white;
-  width: 350px;
   border-radius: 0 4px 4px 0;
-  padding: 40px 50px 40px 40px;
+  padding: 40px 40px 40px 40px;
 }
 
+.info_auth a {
+  color: var(--red);
+}
+.info_auth span {
+  color: var(--beje);
+}
+.info_auth p {
+  font-size: small;
+  margin-bottom: 20px;
+}
 
 .info_auth h5 {
   color: var(--dark);
@@ -96,6 +115,24 @@ body{
   margin-bottom: .2rem;
 }
 
+.form-check label {
+  color: var(--dark);
+}
+.form-check-input:checked {
+  background-color: var(--beje);
+  border-color: var(--beje);
+}
+
+.reset_pass {
+  margin-bottom: 5px;
+  font-size: smaller;
+  color: var(--beje);
+  float: right;
+}
+.reset_pass:hover{
+  color: var(--red);
+}
+
 /* -------------------------------------- */
 /* -------- btn cancel + submit --------- */
 
@@ -104,8 +141,9 @@ body{
   color: #666666;
 }
 .btn__cancel:hover {
-  background-color: var(--red);
-  color: var(--soft-white);
+  /*background-color: var(--dark);*/
+  border-color: var(--red);
+  color: var(--red);
 }
 
 
@@ -113,6 +151,12 @@ body{
   background-color: var(--red);
   color: var(--soft-white);
 }
+.btn__submit:hover {
+  background-color: var(--beje);
+  color: var(--soft-white);
+}
+
+
 
 /* -------- info other methods of auth -------- */
 .info__other_auth {
@@ -122,17 +166,61 @@ body{
   color: gray;
 }
 
+/* --- line behind text --- */
+.info__other_auth {
+  font-size: smaller;
+  text-align: center;
+  margin-bottom: 20px;
+  color: gray;
+  position: relative;
+  z-index: 1;
+}
+.info__other_auth:before {
+  border-top: 1px solid darkgray;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  z-index: -1;
+}
+.info__other_auth span {
+  background: #fff;
+  padding: 0 15px;
+}
+
+
+/* --- creste acount link --- */
+.dont_have_acount_btn {
+  font-size: smaller;
+  margin-top: 15px;
+}
+.dont_have_acount_btn a{
+  color: var(--red);
+}
+.dont_have_acount_btn a:hover{
+  color: var(--beje);
+}
 
 
 /* -------------------------------------- */
 /* ----- btn other auth google + fb ----- */
 
-.btn__google, .btn__fb {
-  background-color: var(--soft-white);
+.btn__other_auth {
+  border: 1px solid var(--beje);
+  font-size: small;
+  font-weight: bolder;
+  color: var(--beje);
 }
-.btn__google img,
-.btn__fb img {
-  width: 20px;
+.btn__other_auth:hover {
+  background-color: var(--beje);
+  color: white;
+}
+
+.btn__other_auth .bx {
+  font-size: 1.2rem;
 }
 
 
@@ -155,7 +243,11 @@ footer a:hover{
 /* -------- remove default focus on btn --------- */
 .btn:not(:disabled):not(.disabled):active:focus,
 .btn:focus, .btn.focus,
-.form-control:focus,.form-control.focus
+.form-control:focus,.form-control.focus,
+.form-check-input:focus
 {
   box-shadow:none;
+}
+.form-check-input:focus {
+  border-color: var(--beje);
 }
