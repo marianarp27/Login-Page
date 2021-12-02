@@ -1,14 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans");
 
 :root {
   --red: #E73C37;
-  --soft-bronw: #BFB0A0;
   --dark: #312C38;
   --beje: #B99581;
   --soft-beje: #F7EFE7;
   --soft-white: #f1f1f1;
 
    /* --- Font and typography --- */
-   --body-font: Helvetica, sans-serif;
+   --body-font: Open Sans, sans-serif;
    --big-font-size: 1.5rem;
    --normal-font-size: .938rem;
 }
@@ -40,8 +40,8 @@ body{
 .content {
   max-width: 650px; 
   margin: 80px auto;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
 }
 
@@ -261,3 +261,26 @@ footer a:hover{
 .form-check-input:focus {
   border-color: var(--beje);
 }
+
+
+
+
+@media screen and (max-width: 370px) {
+  .btn__other_auth {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .content {
+    margin: 40px;
+  }
+  .section_image, .section_auth {
+    border-radius: 4px;
+  }
+
+  .section_image {
+    padding: 20px 40px;
+  }
+}
+

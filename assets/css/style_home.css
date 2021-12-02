@@ -1,14 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans");
 
 :root {
   --red: #E73C37;
-  --soft-bronw: #BFB0A0;
   --dark: #312C38;
   --beje: #B99581;
   --soft-beje: #F7EFE7;
   --soft-white: #f1f1f1;
 
    /* --- Font and typography --- */
-   --body-font: Helvetica, sans-serif;
+   --body-font: Open Sans, sans-serif;
    --big-font-size: 1.5rem;
    --normal-font-size: .938rem;
 }
@@ -101,6 +101,7 @@ body{
 .btn__confirm {
   background-color: var(--beje);
   color: var(--soft-white);
+  font-weight: bolder;
 }
 .btn__confirm:hover {
   background-color: var(--red);
@@ -109,10 +110,19 @@ body{
 
 .modal-header {
   border-bottom: none;
+  color: var(--beje);
 }
 .modal-footer {
   border-top: none;
 }
+
+
+.modal-dialog {
+  max-width: 450px;
+  min-width: 200px;
+  margin: 5rem auto;
+}
+
 
 /* -------------------------- */
 /* -------- footer  --------- */
@@ -142,4 +152,22 @@ footer a:hover{
 }
 .form-check-input:focus {
   border-color: var(--beje);
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .navbar-collapse .modal-dialog {
+    margin: 0 10px;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 990px) {
+  .navbar-collapse {
+    margin-top: 10px;
+  }
 }
