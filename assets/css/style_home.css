@@ -1,0 +1,145 @@
+
+:root {
+  --red: #E73C37;
+  --soft-bronw: #BFB0A0;
+  --dark: #312C38;
+  --beje: #B99581;
+  --soft-beje: #F7EFE7;
+  --soft-white: #f1f1f1;
+
+   /* --- Font and typography --- */
+   --body-font: Helvetica, sans-serif;
+   --big-font-size: 1.5rem;
+   --normal-font-size: .938rem;
+}
+
+
+/* ------------------------------------- */
+/* ---------------  BODY  --------------- */
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+button{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body{
+  background-color: var(--soft-white);
+  position: relative;
+}
+
+/* ------------------------------------------ */
+/* --------------- Navbar Top --------------- */
+.navbar{
+  position: relative;
+  border-radius: 5px;
+  margin: 20px;  
+  position: sticky;
+  z-index: 2;
+  background-color: var(--beje);
+  color: white;
+}
+
+.navbar .company_name{
+  color: white;
+  font-weight: bold;
+}
+
+/* ----- User dropdown log-off ----- */
+.navbar .dropdown .btn{
+  color: white;
+}
+.navbar .dropdown .btn span{
+  font-weight: bolder;
+  font-size: medium;
+}
+
+/* --- ----*/
+
+.dropdown_title {
+  font-weight: bolder;
+  padding: .25rem 1rem;
+  color: var(--dark);
+}
+.dropdown-item {
+  color: gray;
+}
+.dropdown-item:hover {
+  color: white;
+  background-color: var(--beje);
+}
+
+/* ----- IMG Slide ----- */
+.carousel {
+  margin: 20px;
+}
+.carousel-inner {
+  border-radius: 5px;
+}
+
+
+
+/* -------------------------------- */
+/* -------- Modal Log Off --------- */
+
+.btn__cancel {
+  background-color: var(--soft-white);
+  color: #666666;
+}
+.btn__cancel:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+
+.btn__confirm {
+  background-color: var(--beje);
+  color: var(--soft-white);
+}
+.btn__confirm:hover {
+  background-color: var(--red);
+  color: var(--soft-white);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+.modal-footer {
+  border-top: none;
+}
+
+/* -------------------------- */
+/* -------- footer  --------- */
+footer {
+  font-size: smaller;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+footer a{
+  color: #acacac;
+}
+footer a:hover{
+  color: #696969;
+}
+
+/* ---------------------------------------------- */
+/* -------- remove default focus on btn --------- */
+.btn:not(:disabled):not(.disabled):active:focus,
+.btn:focus, .btn.focus,
+.form-control:focus,.form-control.focus,
+.form-check-input:focus
+{
+  box-shadow:none;
+}
+.form-check-input:focus {
+  border-color: var(--beje);
+}

@@ -14,47 +14,40 @@
     
     <!-- ------- CSS --------- -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Login Page </title>
+    <title>Fellini & Sons - Login Page </title>
 </head>
 <body>
 
 
-    <div class="header_login d-flex justify-content-center mt-5 mb-5">
-        
-    </div>
-
+   
     <div class="container content d-flex justify-content-center">
         <div class="row">
 
-            <div class="col-sm-12 col-md-5 section_image d-flex align-items-start flex-column">
-                <i class="fa fa-arrow-left mb-auto " aria-hidden="true"></i>
-                
-
-               <!--  <div class="info_company">                    
-                    <h5 class="mb-3">Fellini & Sons</h5>
-                    <p class=" mb-0">Hotel Canino e Felino, lugar perfeito para deixar o seu fial amigo!</p>
-                </div> -->
+            <div class="col-sm-12 col-md-5 section_image d-flex align-items-start">         
+                <a href="home.html" class="btn btn-sm d-flex align-items-center ps-0"> 
+                    <i class='bx bx-sm bxs-chevron-up bx-rotate-270' ></i>
+                    <span>voltar</span>
+                </a>
             </div>
 
             <div class="col-sm-12 col-md-7 section_auth">
 
-                <div class="info_auth">
-                    <h5 class="mb-2">Bem vindo ao <span>Fellini & Sons</span></h5>
-                    <!-- <p>Ainda não tem conta? <a href="#">Registe-se</a></p> -->
+                <div class="info_auth mb-4">
+                    <h5>Bem vindo ao <span>Fellini & Sons</span></h5>
                 </div>
                                 
                 <form action="#">
                     <div class="mb-3 form-group">
                         <label for="email" class="form-label">E-mail</label>
                         <span class="bx bx-user form_control_icon"></span>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" required>
                     </div>
 
                     <div class="mb-3 form-group">
                         <a href="#" class="reset_pass">Esqueceu-se da palavra-passe?</a>
                         <label for="pass" class="form-label">Palavra-passe</label>
                         <span class="bx bx-lock-alt form_control_icon"></span>
-                        <input type="password" class="form-control" id="pass">                        
+                        <input type="password" class="form-control" id="pass" required>                        
                     </div>
 
                     <div class="form-check form-group">
@@ -65,8 +58,7 @@
                     </div>
                     
                     <div class="d-flex justify-content-end mt-4">
-                        <!-- <button class="btn btn__cancel me-3">Cancelar</button> -->
-                        <button type="submit" class="btn btn__submit w-100">Iniciar sessão</button>
+                        <a href="home.html" type="submit" class="btn btn__submit w-100">Iniciar sessão</a>
                     </div>
                     
                 </form> 
@@ -101,7 +93,8 @@
    
 
     <footer class="text-center">
-        <a href="https://icons8.com/icon/vHiINsjzGS5t/pets">Favicon - Pets icon by Icons8</a>
+        <a class="me-2" href="https://icons8.com/icon/vHiINsjzGS5t/pets">Favicon - Pets icon by Icons8</a>
+        <a href="https://unsplash.com/">Photos by Unsplash</a>
     </footer>
     
 
